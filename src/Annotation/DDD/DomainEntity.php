@@ -1,7 +1,6 @@
 <?php
 declare(strict_types=1);
-
-namespace AlpEs\Common\Domain\Annotation\DDD;
+namespace Headsnet\LivingDocumentation\Annotation\DDD;
 
 use Doctrine\Common\Annotations\Annotation;
 

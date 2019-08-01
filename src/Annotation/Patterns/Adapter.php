@@ -1,7 +1,5 @@
 <?php
-declare(strict_types=1);
-
-namespace AlpEs\Common\Domain\Annotation\Patterns;
+namespace Headsnet\LivingDocumentation\Annotation\Patterns;
 
 use Doctrine\Common\Annotations\Annotation;
 
