@@ -1,0 +1,23 @@
+{
+  "name": "headsnet/living-documentation",
+  "type": "library",
+  "description": "Provides Living Documentation annotations",
+  "keywords": ["living documentation", "annotation", "php"],
+  "homepage": "https://github.com/headsnet/livedoc",
+  "license": "MIT",
+  "support": {
+    "issues": "https://github.com/headsnet/livedoc/issues"
+  },
+  "require": {
+    "php": ">=7.1",
+    "doctrine/annotations": "^1.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "Headsnet\\LivingDocumention\\": "src/"
+    },
+    "exclude-from-classmap": [
+      "/Tests/"
+    ]
+  }
+}
