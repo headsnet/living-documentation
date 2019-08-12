@@ -11,8 +11,9 @@
   "require": {
     "php": ">=7.1",
     "doctrine/annotations": "^1.5",
-    "haydenpierce/class-finder": "^3.3",
-    "symfony/console": "^4.0"
+    "haydenpierce/class-finder": "^0.3.3",
+    "symfony/console": "^4.0",
+    "twig/twig": "^2.0"
   },
   "autoload": {
     "psr-4": {

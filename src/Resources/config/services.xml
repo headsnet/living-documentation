@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services
+        https://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+
+        <service id="headsnet_livedoc.publisher" class="Headsnet\LivingDocumentation\Publisher\Publisher">
+            <argument type="service" id="twig"/>
+            <argument type="string" id="%kernel.project_dir%"/>
+        </service>
+
+        <service id="headsnet_livedoc.command.publish" class="Headsnet\LivingDocumentation\Console\PublishCommand">
+            <argument type="service" id="headsnet_livedoc.publisher"/>
+            <tag name="console.command"/>
+        </service>
+
+    </services>
+
+</container>

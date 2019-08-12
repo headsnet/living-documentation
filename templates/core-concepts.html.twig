@@ -1,0 +1,22 @@
+
+Model Documentation for: {{ data.namespace }}
+==
+
+{% if data.coreConcepts is defined %}
+## Core Concepts
+
+{% for class,results in data.coreConcepts %}
+#### {{ class }}
+{% for result in results %}
+- {{ result }}
+{% endfor %}
+
+{% endfor %}
+{% endif %}
+
+{% if data.aggregateRoots is defined %}
+## Aggregate Roots
+{% for aggregateRoot in data.aggregateRoots %}
+- {{ aggregateRoot }}
+{% endfor %}
+{% endif %}

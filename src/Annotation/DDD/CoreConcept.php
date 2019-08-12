@@ -16,5 +16,25 @@ use Doctrine\Common\Annotations\Annotation;
  */
 final class CoreConcept
 {
+    /**
+     * @var string
+     * @Required
+     */
+    private $description;
 
+    /**
+     * @param array $values
+     */
+    public function __construct(array $values)
+    {
+        $this->description = $values['description'];
+    }
+
+    /**
+     * @return string
+     */
+    public function getDescription(): string
+    {
+        return $this->description;
+    }
 }
