@@ -10,11 +10,13 @@
   },
   "require": {
     "php": ">=7.1",
-    "doctrine/annotations": "^1.5"
+    "doctrine/annotations": "^1.5",
+    "haydenpierce/class-finder": "^3.3",
+    "symfony/console": "^4.0"
   },
   "autoload": {
     "psr-4": {
-      "Headsnet\\LivingDocumention\\": "src/"
+      "Headsnet\\LivingDocumentation\\": "src/"
     },
     "exclude-from-classmap": [
       "/Tests/"
