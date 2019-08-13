@@ -2,6 +2,7 @@
 namespace Headsnet\LivingDocumentation\Annotation\Patterns;
 
 use Doctrine\Common\Annotations\Annotation;
+use Headsnet\LivingDocumentation\Annotation\LivingDocumentationAnnotation;
 
 /**
  * The adapter pattern is a software design pattern that allows the
@@ -15,7 +16,7 @@ use Doctrine\Common\Annotations\Annotation;
  * @Annotation
  * @Target({"CLASS"})
  */
-final class Adapter
+final class Adapter implements LivingDocumentationAnnotation
 {
 
 }

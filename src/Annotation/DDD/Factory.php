@@ -2,6 +2,7 @@
 namespace Headsnet\LivingDocumentation\Annotation\DDD;
 
 use Doctrine\Common\Annotations\Annotation;
+use Headsnet\LivingDocumentation\Annotation\LivingDocumentationAnnotation;
 
 /**
  * Methods for creating domain objects should delegate
@@ -11,7 +12,7 @@ use Doctrine\Common\Annotations\Annotation;
  * @Annotation
  * @Target({"CLASS"})
  */
-final class Factory
+final class Factory implements LivingDocumentationAnnotation
 {
 
 }

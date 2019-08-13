@@ -2,6 +2,7 @@
 namespace Headsnet\LivingDocumentation\Annotation\DDD;
 
 use Doctrine\Common\Annotations\Annotation;
+use Headsnet\LivingDocumentation\Annotation\LivingDocumentationAnnotation;
 
 /**
  * A collection of objects that are bound together by a root entity,
@@ -12,7 +13,7 @@ use Doctrine\Common\Annotations\Annotation;
  * @Annotation
  * @Target({"CLASS"})
  */
-final class AggregateRoot
+final class AggregateRoot implements LivingDocumentationAnnotation
 {
 
 }

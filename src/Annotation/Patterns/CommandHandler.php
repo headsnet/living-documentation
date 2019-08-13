@@ -2,6 +2,7 @@
 namespace Headsnet\LivingDocumentation\Annotation\Patterns;
 
 use Doctrine\Common\Annotations\Annotation;
+use Headsnet\LivingDocumentation\Annotation\LivingDocumentationAnnotation;
 
 /**
  * A Command Handler is a class that receives Command
@@ -15,7 +16,7 @@ use Doctrine\Common\Annotations\Annotation;
  * @Annotation
  * @Target({"CLASS"})
  */
-final class CommandHandler
+final class CommandHandler implements LivingDocumentationAnnotation
 {
 
 }

@@ -2,6 +2,7 @@
 namespace Headsnet\LivingDocumentation\Annotation\DDD;
 
 use Doctrine\Common\Annotations\Annotation;
+use Headsnet\LivingDocumentation\Annotation\LivingDocumentationAnnotation;
 
 /**
  * A domain object that defines an event (something that happens).
@@ -10,7 +11,7 @@ use Doctrine\Common\Annotations\Annotation;
  * @Annotation
  * @Target({"CLASS"})
  */
-final class DomainEvent
+final class DomainEvent implements LivingDocumentationAnnotation
 {
 
 }

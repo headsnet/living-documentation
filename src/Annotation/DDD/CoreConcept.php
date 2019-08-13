@@ -2,6 +2,7 @@
 namespace Headsnet\LivingDocumentation\Annotation\DDD;
 
 use Doctrine\Common\Annotations\Annotation;
+use Headsnet\LivingDocumentation\Annotation\LivingDocumentationAnnotation;
 
 /**
  * Use this annotation on key components of the core domain.
@@ -14,7 +15,7 @@ use Doctrine\Common\Annotations\Annotation;
  * @Annotation
  * @Target({"CLASS"})
  */
-final class CoreConcept
+final class CoreConcept implements LivingDocumentationAnnotation
 {
     /**
      * @var string

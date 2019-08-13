@@ -2,6 +2,7 @@
 namespace Headsnet\LivingDocumentation\Annotation\Patterns;
 
 use Doctrine\Common\Annotations\Annotation;
+use Headsnet\LivingDocumentation\Annotation\LivingDocumentationAnnotation;
 
 /**
  * A Command object is the message sent to a Command Bus,
@@ -12,7 +13,7 @@ use Doctrine\Common\Annotations\Annotation;
  * @Annotation
  * @Target({"CLASS"})
  */
-final class Command
+final class Command implements LivingDocumentationAnnotation
 {
 
 }

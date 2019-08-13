@@ -2,6 +2,7 @@
 namespace Headsnet\LivingDocumentation\Annotation\Patterns;
 
 use Doctrine\Common\Annotations\Annotation;
+use Headsnet\LivingDocumentation\Annotation\LivingDocumentationAnnotation;
 
 /**
  * A DTO class is a simple object containing primitive properties
@@ -12,7 +13,7 @@ use Doctrine\Common\Annotations\Annotation;
  * @Annotation
  * @Target({"CLASS"})
  */
-final class DTO
+final class DTO implements LivingDocumentationAnnotation
 {
 
 }
