@@ -2,6 +2,7 @@
 namespace Headsnet\LivingDocumentation\Annotation\DDD;
 
 use Doctrine\Common\Annotations\Annotation;
+use Headsnet\LivingDocumentation\Annotation\BaseAnnotation;
 use Headsnet\LivingDocumentation\Annotation\LivingDocumentationAnnotation;
 
 /**
@@ -15,11 +16,16 @@ use Headsnet\LivingDocumentation\Annotation\LivingDocumentationAnnotation;
  * @Annotation
  * @Target({"CLASS"})
  */
-final class CoreConcept implements LivingDocumentationAnnotation
+final class CoreConcept extends BaseAnnotation implements LivingDocumentationAnnotation
 {
     /**
      * @var string
      * @Required
+     */
+    private $summary;
+
+    /**
+     * @var string
      */
     private $description;
 
@@ -28,7 +34,16 @@ final class CoreConcept implements LivingDocumentationAnnotation
      */
     public function __construct(array $values)
     {
-        $this->description = $values['description'];
+        $this->summary = $values['summary'];
+        $this->description = $values['description'] ?? '';
+    }
+
+    /**
+     * @return string
+     */
+    public function getSummary(): string
+    {
+        return $this->convertMultiLine($this->summary);
     }
 
     /**
@@ -36,6 +51,6 @@ final class CoreConcept implements LivingDocumentationAnnotation
      */
     public function getDescription(): string
     {
-        return $this->description;
+        return $this->convertMultiLine($this->description);
     }
 }

@@ -13,6 +13,8 @@
     "doctrine/annotations": "^1.5",
     "haydenpierce/class-finder": "^0.3.3",
     "symfony/console": "^4.0",
+    "symfony/event-dispatcher": "^4.0",
+    "symfony/filesystem": "^4.0",
     "twig/twig": "^2.0"
   },
   "autoload": {

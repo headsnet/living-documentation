@@ -1,0 +1,15 @@
+
+Model Documentation for: {{ namespace }}
+==
+
+{% if data.Patterns_Command is defined %}
+## Use-Cases (application services)
+
+{% for result in data.Patterns_Command %}
+#### {{ result.shortClass }}
+_{{ result.annotation.value|default('No description available') }}_
+
+`{{ namespace }}{{ result.class }}`
+
+{% endfor %}
+{% endif %}

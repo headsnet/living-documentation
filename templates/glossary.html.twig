@@ -1,0 +1,19 @@
+
+Model Documentation for: {{ namespace }}
+==
+
+{% if data.DDD_CoreConcept is defined %}
+## Core Concepts
+
+{% for result in data.DDD_CoreConcept %}
+#### {{ result.shortClass }}
+_{{ result.annotation.summary }}_
+{% if result.annotation.description %}
+
+{{ result.annotation.description }}
+{% endif %}
+
+`{{ namespace }}{{ result.class }}`
+
+{% endfor %}
+{% endif %}

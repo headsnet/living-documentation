@@ -6,13 +6,23 @@
 
     <services>
 
-        <service id="headsnet_livedoc.publisher" class="Headsnet\LivingDocumentation\Publisher\Publisher">
+        <service id="headsnet_livedoc.subscriber.glossary" class="Headsnet\LivingDocumentation\EventSubscriber\PublishGlossary">
             <argument type="service" id="twig"/>
+            <tag name="kernel.event_subscriber"/>
+        </service>
+
+        <service id="headsnet_livedoc.subscriber.use_cases" class="Headsnet\LivingDocumentation\EventSubscriber\PublishUseCases">
+            <argument type="service" id="twig"/>
+            <tag name="kernel.event_subscriber"/>
+        </service>
+
+        <service id="headsnet_livedoc.annotation_loader" class="Headsnet\LivingDocumentation\Services\AnnotationLoader">
+            <argument type="service" id="event_dispatcher"/>
             <argument type="string" id="%kernel.project_dir%"/>
         </service>
 
         <service id="headsnet_livedoc.command.publish" class="Headsnet\LivingDocumentation\Console\PublishCommand">
-            <argument type="service" id="headsnet_livedoc.publisher"/>
+            <argument type="service" id="headsnet_livedoc.annotation_loader"/>
             <tag name="console.command"/>
         </service>
 

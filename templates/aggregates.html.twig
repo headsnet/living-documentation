@@ -1,0 +1,10 @@
+
+Model Documentation for: {{ namespace }}
+==
+
+{% if data.DDD_AggregateRoot is defined %}
+	## Aggregate Roots
+	{% for result in data.DDD_AggregateRoot %}
+		- {{ result.class }}
+	{% endfor %}
+{% endif %}

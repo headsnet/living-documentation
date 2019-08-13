@@ -3,10 +3,11 @@ declare(strict_types=1);
 
 namespace Headsnet\LivingDocumentation\Console;
 
-use Headsnet\LivingDocumentation\Publisher\Publisher;
+use Headsnet\LivingDocumentation\Services\AnnotationLoader;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 
 /**
@@ -15,20 +16,20 @@ use Symfony\Component\Console\Output\OutputInterface;
 class PublishCommand extends Command
 {
     /**
-     * @var Publisher
+     * @var AnnotationLoader
      */
-    private $publisher;
+    private $parser;
 
     /**
      * Constructor
      *
-     * @param Publisher $publisher
+     * @param AnnotationLoader $parser
      */
-	public function __construct(Publisher $publisher)
+	public function __construct(AnnotationLoader $parser)
 	{
 		parent::__construct();
 
-        $this->publisher = $publisher;
+        $this->parser = $parser;
     }
 
 	/**
@@ -39,7 +40,25 @@ class PublishCommand extends Command
 		$this
 			->setName('headsnet:livedoc:publish')
 			->setDescription('Publish documentation')
-            ->addArgument('namespace', InputArgument::REQUIRED, 'The namespace to process')
+            ->addArgument(
+                'namespace',
+                InputArgument::REQUIRED,
+                'The namespace to process'
+            )
+            ->addOption(
+                'context',
+                'c',
+                InputOption::VALUE_REQUIRED,
+                'What is the name of the context?',
+                'default'
+            )
+            ->addOption(
+                'output',
+                'o',
+                InputOption::VALUE_REQUIRED,
+                'Path to output directory',
+                'docs/'
+            )
         ;
 	}
 
@@ -54,8 +73,10 @@ class PublishCommand extends Command
 	 */
 	protected function execute(InputInterface $input, OutputInterface $output)
 	{
-        $this->publisher->publish(
-            $input->getArgument('namespace')
+        $this->parser->load(
+            $input->getArgument('namespace'),
+            $input->getOption('context'),
+            $input->getOption('output')
         );
 	}
 }

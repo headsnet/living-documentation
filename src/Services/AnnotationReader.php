@@ -1,6 +1,7 @@
 <?php
-namespace Headsnet\LivingDocumentation\Publisher;
+namespace Headsnet\LivingDocumentation\Services;
 
+use Doctrine\Common\Annotations\AnnotationException;
 use Doctrine\Common\Annotations\AnnotationReader as DocReader;
 
 /**
@@ -9,10 +10,13 @@ use Doctrine\Common\Annotations\AnnotationReader as DocReader;
 class AnnotationReader
 {
     /**
-     * @param $class
-     * @return null|\StdClass
+     * @param string $class
+     *
+     * @return array
+     * @throws \ReflectionException
+     * @throws AnnotationException
      */
-    public static function getClass($class)
+    public static function getClass(string $class)
     {
         $reader = new DocReader();
         $reflector = new \ReflectionClass($class);
@@ -21,9 +25,12 @@ class AnnotationReader
     }
 
     /**
-     * @param $class
-     * @param $property
+     * @param string $class
+     * @param string $property
+     *
      * @return array
+     * @throws \ReflectionException
+     * @throws AnnotationException
      */
     public static function getProperty($class, $property)
     {
@@ -34,9 +41,12 @@ class AnnotationReader
     }
 
     /**
-     * @param $class
-     * @param $method
+     * @param string $class
+     * @param string $method
+     *
      * @return array
+     * @throws \ReflectionException
+     * @throws AnnotationException
      */
     public static function getMethod($class, $method)
     {
