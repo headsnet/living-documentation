@@ -8,14 +8,8 @@ namespace Headsnet\LivingDocumentation\Annotation;
  */
 abstract class BaseAnnotation
 {
-
     /**
-     * This method simply removes new-line characters and the extra ' * ' that
-     * the AnnotationReader includes from a multi-line annotation comment.
-     *
-     * @param string $value
-     *
-     * @return string
+     * {@inheritDoc}
      */
     protected function convertMultiLine(string $value): string
     {
@@ -26,5 +20,4 @@ abstract class BaseAnnotation
 
         return $value;
     }
-
 }

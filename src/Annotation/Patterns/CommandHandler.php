@@ -6,7 +6,7 @@ use Headsnet\LivingDocumentation\Annotation\LivingDocumentationAnnotation;
 
 /**
  * A Command Handler is a class that receives Command
- * objects from the Comand Bus, and acts on them accordingly.
+ * objects from the Command Bus, and acts on them accordingly.
  *
  * Command Handlers live in the application layer and should
  * be a thin service that coordinates domain objects.

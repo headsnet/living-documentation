@@ -3,6 +3,7 @@ namespace Headsnet\LivingDocumentation\Annotation\Patterns;
 
 use Doctrine\Common\Annotations\Annotation;
 use Headsnet\LivingDocumentation\Annotation\LivingDocumentationAnnotation;
+use Headsnet\LivingDocumentation\Annotation\SimpleValueAnnotation;
 
 /**
  * A Command object is the message sent to a Command Bus,
@@ -15,25 +16,5 @@ use Headsnet\LivingDocumentation\Annotation\LivingDocumentationAnnotation;
  */
 final class Command implements LivingDocumentationAnnotation
 {
-    /**
-     * @var string
-     * @Required
-     */
-    private $value;
-
-    /**
-     * @param array $values
-     */
-    public function __construct(array $values)
-    {
-        $this->value = $values['value'] ?? '';
-    }
-
-    /**
-     * @return string
-     */
-    public function getValue(): string
-    {
-        return $this->value;
-    }
+    use SimpleValueAnnotation;
 }
