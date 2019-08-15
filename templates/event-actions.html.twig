@@ -1,0 +1,15 @@
+{% set namespaceEscaped = namespace|replace({'\\':'\\\\'}) %}
+Model Documentation for: {{ namespace }}
+==
+
+{% if data.Patterns_EventHandler is defined %}
+## Event Actions
+
+{% for result in data.Patterns_EventHandler %}
+#### _{{ result.annotation.event }}_
+_{{ result.annotation.description|default('No description available') }}_
+
+`{{ namespace }}{{ result.class }}`
+
+{% endfor %}
+{% endif %}

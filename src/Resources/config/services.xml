@@ -6,6 +6,16 @@
 
     <services>
 
+        <service id="headsnet_livedoc.subscriber.email_messages" class="Headsnet\LivingDocumentation\EventSubscriber\PublishEmailMessages">
+            <argument type="service" id="twig"/>
+            <tag name="kernel.event_subscriber"/>
+        </service>
+
+        <service id="headsnet_livedoc.subscriber.event_actions" class="Headsnet\LivingDocumentation\EventSubscriber\PublishEventActions">
+            <argument type="service" id="twig"/>
+            <tag name="kernel.event_subscriber"/>
+        </service>
+
         <service id="headsnet_livedoc.subscriber.glossary" class="Headsnet\LivingDocumentation\EventSubscriber\PublishGlossary">
             <argument type="service" id="twig"/>
             <tag name="kernel.event_subscriber"/>

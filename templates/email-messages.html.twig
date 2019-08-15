@@ -1,0 +1,18 @@
+
+Model Documentation for: {{ namespace }}
+==
+
+{% if data.Infrastructure_EmailMessage is defined %}
+## Email Messages
+
+{% for result in data.Infrastructure_EmailMessage %}
+#### _{{ result.annotation.messageName }}_
+{% if result.annotation.description %}
+
+{{ result.annotation.description }}
+{% endif %}
+
+`{{ namespace }}{{ result.class }}`
+
+{% endfor %}
+{% endif %}
