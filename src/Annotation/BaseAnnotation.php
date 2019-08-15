@@ -17,6 +17,7 @@ abstract class BaseAnnotation
         $value = str_replace("\n", ' ', $value);
         $value = str_replace("\r", ' ', $value);
         $value = preg_replace("/\s+/", ' ', $value);
+        $value = str_replace(' *', "\n\n", $value); // Support blank lines in text as a paragraph
 
         return $value;
     }
