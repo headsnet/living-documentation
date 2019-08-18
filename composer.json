@@ -3,19 +3,14 @@
   "type": "library",
   "description": "Provides Living Documentation annotations",
   "keywords": ["living documentation", "annotation", "php"],
-  "homepage": "https://github.com/headsnet/livedoc",
+  "homepage": "https://github.com/headsnet/living-documentation",
   "license": "MIT",
   "support": {
-    "issues": "https://github.com/headsnet/livedoc/issues"
+    "issues": "https://github.com/headsnet/living-documentation/issues"
   },
   "require": {
     "php": ">=7.1",
-    "doctrine/annotations": "^1.5",
-    "haydenpierce/class-finder": "^0.3.3",
-    "symfony/console": "^4.0",
-    "symfony/event-dispatcher": "^4.0",
-    "symfony/filesystem": "^4.0",
-    "twig/twig": "^2.0"
+    "doctrine/annotations": "^1.5"
   },
   "autoload": {
     "psr-4": {

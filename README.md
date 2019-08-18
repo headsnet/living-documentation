@@ -6,6 +6,8 @@ This package provides tools to aid in generation of Living Documentation in PHP 
 Living Documentation has been championed by Cyrille Martraire and his book "Living Documentation" is the primary 
 inspiration for this package.
 
+Symfony integration is available via the [provided bundle](https://github.com/headsnet/living-documentation-bundle).
+
 ### Annotations
 
 The package provides a set of annotations that can be used to semantically document a codebase, as well as provide 
