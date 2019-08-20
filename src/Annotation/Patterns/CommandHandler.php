@@ -18,5 +18,24 @@ use Headsnet\LivingDocumentation\Annotation\LivingDocumentationAnnotation;
  */
 final class CommandHandler implements LivingDocumentationAnnotation
 {
+    /**
+     * @var bool
+     */
+    private $idempotent = false;
 
+    /**
+     * @param array $values
+     */
+    public function __construct(array $values)
+    {
+        $this->idempotent = $values['idempotent'];
+    }
+
+    /**
+     * @return bool
+     */
+    public function isIdempotent(): bool
+    {
+        return $this->idempotent;
+    }
 }

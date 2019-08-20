@@ -31,12 +31,18 @@ final class EventHandler extends BaseAnnotation implements LivingDocumentationAn
     private $description;
 
     /**
+     * @var bool
+     */
+    private $idempotent = false;
+
+    /**
      * @param array $values
      */
     public function __construct(array $values)
     {
         $this->event = $values['event'];
         $this->description = $values['description'] ?? '';
+        $this->idempotent = $values['idempotent'];
     }
 
     /**
@@ -53,5 +59,13 @@ final class EventHandler extends BaseAnnotation implements LivingDocumentationAn
     public function getDescription(): string
     {
         return $this->convertMultiLine($this->description);
+    }
+
+    /**
+     * @return bool
+     */
+    public function isIdempotent(): bool
+    {
+        return $this->idempotent;
     }
 }
