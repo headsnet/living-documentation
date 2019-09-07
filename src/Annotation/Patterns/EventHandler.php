@@ -42,7 +42,7 @@ final class EventHandler extends BaseAnnotation implements LivingDocumentationAn
     {
         $this->event = $values['event'];
         $this->description = $values['description'] ?? '';
-        $this->idempotent = $values['idempotent'];
+        $this->idempotent = $values['idempotent'] ?? '';
     }
 
     /**

@@ -28,7 +28,7 @@ final class CommandHandler implements LivingDocumentationAnnotation
      */
     public function __construct(array $values)
     {
-        $this->idempotent = $values['idempotent'];
+        $this->idempotent = $values['idempotent'] ?? '';
     }
 
     /**
