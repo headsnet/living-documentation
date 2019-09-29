@@ -2,7 +2,9 @@
 namespace Headsnet\LivingDocumentation\Annotation\DDD;
 
 use Doctrine\Common\Annotations\Annotation;
+use Headsnet\LivingDocumentation\Annotation\BaseAnnotation;
 use Headsnet\LivingDocumentation\Annotation\LivingDocumentationAnnotation;
+use Headsnet\LivingDocumentation\Annotation\SimpleValueAnnotation;
 
 /**
  * An object that contains attributes but has no conceptual
@@ -11,7 +13,7 @@ use Headsnet\LivingDocumentation\Annotation\LivingDocumentationAnnotation;
  * @Annotation
  * @Target({"CLASS"})
  */
-final class ValueObject implements LivingDocumentationAnnotation
+final class ValueObject extends BaseAnnotation implements LivingDocumentationAnnotation
 {
-
+    use SimpleValueAnnotation;
 }
