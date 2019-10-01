@@ -4,6 +4,7 @@ namespace Headsnet\LivingDocumentation\Annotation\Patterns;
 use Doctrine\Common\Annotations\Annotation;
 use Headsnet\LivingDocumentation\Annotation\BaseAnnotation;
 use Headsnet\LivingDocumentation\Annotation\LivingDocumentationAnnotation;
+use Headsnet\LivingDocumentation\Annotation\Traits\IdempotentTrait;
 
 /**
  * An Event Handler is a class that receives Event
@@ -19,6 +20,8 @@ use Headsnet\LivingDocumentation\Annotation\LivingDocumentationAnnotation;
  */
 final class EventHandler extends BaseAnnotation implements LivingDocumentationAnnotation
 {
+    use IdempotentTrait;
+
     /**
      * @var string
      * @Required
@@ -29,11 +32,6 @@ final class EventHandler extends BaseAnnotation implements LivingDocumentationAn
      * @var string
      */
     private $description;
-
-    /**
-     * @var bool
-     */
-    private $idempotent = false;
 
     /**
      * @param array $values
@@ -59,13 +57,5 @@ final class EventHandler extends BaseAnnotation implements LivingDocumentationAn
     public function getDescription(): string
     {
         return $this->convertMultiLine($this->description);
-    }
-
-    /**
-     * @return bool
-     */
-    public function isIdempotent(): bool
-    {
-        return $this->idempotent;
     }
 }

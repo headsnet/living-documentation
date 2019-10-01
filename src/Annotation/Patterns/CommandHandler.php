@@ -3,6 +3,7 @@ namespace Headsnet\LivingDocumentation\Annotation\Patterns;
 
 use Doctrine\Common\Annotations\Annotation;
 use Headsnet\LivingDocumentation\Annotation\LivingDocumentationAnnotation;
+use Headsnet\LivingDocumentation\Annotation\Traits\IdempotentTrait;
 
 /**
  * A Command Handler is a class that receives Command
@@ -18,10 +19,7 @@ use Headsnet\LivingDocumentation\Annotation\LivingDocumentationAnnotation;
  */
 final class CommandHandler implements LivingDocumentationAnnotation
 {
-    /**
-     * @var bool
-     */
-    private $idempotent = false;
+    use IdempotentTrait;
 
     /**
      * @param array $values
@@ -29,13 +27,5 @@ final class CommandHandler implements LivingDocumentationAnnotation
     public function __construct(array $values)
     {
         $this->idempotent = $values['idempotent'] ?? '';
-    }
-
-    /**
-     * @return bool
-     */
-    public function isIdempotent(): bool
-    {
-        return $this->idempotent;
     }
 }
