@@ -3,7 +3,7 @@ namespace Headsnet\LivingDocumentation\Annotation\Patterns;
 
 use Doctrine\Common\Annotations\Annotation;
 use Headsnet\LivingDocumentation\Annotation\LivingDocumentationAnnotation;
-use Headsnet\LivingDocumentation\Annotation\Traits\IdempotentTrait;
+use Headsnet\LivingDocumentation\Annotation\Traits\ImmutableTrait;
 
 /**
  * A DTO class is a simple object containing primitive properties
@@ -16,13 +16,13 @@ use Headsnet\LivingDocumentation\Annotation\Traits\IdempotentTrait;
  */
 final class DTO implements LivingDocumentationAnnotation
 {
-    use IdempotentTrait;
+    use ImmutableTrait;
 
     /**
      * @param array $values
      */
     public function __construct(array $values)
     {
-        $this->idempotent = $values['idempotent'] ?? '';
+        $this->immutable = $values['immutable'] ?? '';
     }
 }
