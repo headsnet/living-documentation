@@ -9,9 +9,6 @@ trait IdempotentTrait
      */
     private $idempotent = false;
 
-    /**
-     * @return bool
-     */
     public function isIdempotent(): bool
     {
         return $this->idempotent;

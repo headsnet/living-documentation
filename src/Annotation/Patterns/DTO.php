@@ -18,9 +18,6 @@ final class DTO implements LivingDocumentationAnnotation
 {
     use ImmutableTrait;
 
-    /**
-     * @param array $values
-     */
     public function __construct(array $values)
     {
         $this->immutable = $values['immutable'] ?? '';

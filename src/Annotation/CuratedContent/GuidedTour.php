@@ -34,9 +34,6 @@ final class GuidedTour extends BaseAnnotation implements LivingDocumentationAnno
      */
     private $rank;
 
-    /**
-     * @param array $values
-     */
     public function __construct(array $values)
     {
         $this->name = $values['name'];
@@ -44,25 +41,16 @@ final class GuidedTour extends BaseAnnotation implements LivingDocumentationAnno
         $this->rank = $values['rank'];
     }
 
-    /**
-     * @return string
-     */
     public function getName(): string
     {
         return $this->convertMultiLine($this->name);
     }
 
-    /**
-     * @return string
-     */
     public function getDescription(): string
     {
         return $this->convertMultiLine($this->description);
     }
 
-    /**
-     * @return int
-     */
     public function getRank(): int
     {
         return $this->rank;

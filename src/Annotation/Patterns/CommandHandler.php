@@ -21,9 +21,6 @@ final class CommandHandler implements LivingDocumentationAnnotation
 {
     use IdempotentTrait;
 
-    /**
-     * @param array $values
-     */
     public function __construct(array $values)
     {
         $this->idempotent = $values['idempotent'] ?? '';

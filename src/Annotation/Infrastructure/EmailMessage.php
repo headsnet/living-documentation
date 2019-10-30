@@ -26,26 +26,17 @@ final class EmailMessage extends BaseAnnotation implements LivingDocumentationAn
      */
     private $description;
 
-    /**
-     * @param array $values
-     */
     public function __construct(array $values)
     {
         $this->messageName = $values['messageName'];
         $this->description = $values['description'] ?? '';
     }
 
-    /**
-     * @return string
-     */
     public function getMessageName(): string
     {
         return $this->convertMultiLine($this->messageName);
     }
 
-    /**
-     * @return string
-     */
     public function getDescription(): string
     {
         return $this->convertMultiLine($this->description);

@@ -13,5 +13,4 @@ use Headsnet\LivingDocumentation\Annotation\LivingDocumentationAnnotation;
  */
 final class IntegrationEvent implements LivingDocumentationAnnotation
 {
-
 }

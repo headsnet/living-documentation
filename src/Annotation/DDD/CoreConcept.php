@@ -29,26 +29,17 @@ final class CoreConcept extends BaseAnnotation implements LivingDocumentationAnn
      */
     private $description;
 
-    /**
-     * @param array $values
-     */
     public function __construct(array $values)
     {
         $this->summary = $values['summary'];
         $this->description = $values['description'] ?? '';
     }
 
-    /**
-     * @return string
-     */
     public function getSummary(): string
     {
         return $this->convertMultiLine($this->summary);
     }
 
-    /**
-     * @return string
-     */
     public function getDescription(): string
     {
         return $this->convertMultiLine($this->description);

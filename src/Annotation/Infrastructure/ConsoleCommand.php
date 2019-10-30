@@ -28,26 +28,17 @@ final class ConsoleCommand extends BaseAnnotation implements LivingDocumentation
      */
     private $description;
 
-    /**
-     * @param array $values
-     */
     public function __construct(array $values)
     {
         $this->commandName = $values['commandName'];
         $this->description = $values['description'];
     }
 
-    /**
-     * @return string
-     */
     public function getCommandName(): string
     {
         return $this->convertMultiLine($this->commandName);
     }
 
-    /**
-     * @return string
-     */
     public function getDescription(): string
     {
         return $this->convertMultiLine($this->description);

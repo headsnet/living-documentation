@@ -9,9 +9,6 @@ trait ImmutableTrait
      */
     private $immutable = false;
 
-    /**
-     * @return bool
-     */
     public function isImmutable(): bool
     {
         return $this->immutable;

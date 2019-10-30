@@ -15,5 +15,4 @@ use Headsnet\LivingDocumentation\Annotation\LivingDocumentationAnnotation;
  */
 final class AggregateRoot implements LivingDocumentationAnnotation
 {
-
 }

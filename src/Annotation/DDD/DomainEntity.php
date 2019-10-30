@@ -14,5 +14,4 @@ use Headsnet\LivingDocumentation\Annotation\LivingDocumentationAnnotation;
  */
 final class DomainEntity implements LivingDocumentationAnnotation
 {
-
 }

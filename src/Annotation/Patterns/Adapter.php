@@ -18,5 +18,4 @@ use Headsnet\LivingDocumentation\Annotation\LivingDocumentationAnnotation;
  */
 final class Adapter implements LivingDocumentationAnnotation
 {
-
 }
