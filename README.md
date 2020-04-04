@@ -41,6 +41,11 @@ class HotelRoom
     private $underRenovation
 }
 ```
+### Acknowledgements
+
+Many annotations have definitions which are either linked resources, or attributed to the original author.
+
+DDD definitions usually come from Vaughn Vernon's Red Book or Eric Evan's Blue Book.
 
 ### Contributions
 
