@@ -1,5 +1,5 @@
 <?php
-namespace Headsnet\LivingDocumentation\Annotation\DDD;
+namespace Headsnet\LivingDocumentation\Annotation\Refactoring;
 
 use Doctrine\Common\Annotations\Annotation;
 use Headsnet\LivingDocumentation\Annotation\BaseAnnotation;
