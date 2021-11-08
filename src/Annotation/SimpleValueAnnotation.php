@@ -11,9 +11,9 @@ trait SimpleValueAnnotation
      */
     private $value;
 
-    public function __construct(array $values)
+    public function __construct(string $value = '')
     {
-        $this->value = $values['value'] ?? '';
+        $this->value = $value;
     }
 
     public function getValue(): string
