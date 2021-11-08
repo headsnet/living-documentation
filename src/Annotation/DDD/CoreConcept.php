@@ -16,6 +16,7 @@ use Headsnet\LivingDocumentation\Annotation\LivingDocumentationAnnotation;
  * @Annotation
  * @Target({"CLASS"})
  */
+#[\Attribute(\Attribute::TARGET_CLASS)]
 final class CoreConcept extends BaseAnnotation implements LivingDocumentationAnnotation
 {
     /**

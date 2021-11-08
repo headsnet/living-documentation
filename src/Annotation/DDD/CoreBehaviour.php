@@ -17,6 +17,7 @@ use Headsnet\LivingDocumentation\Annotation\SimpleValueAnnotation;
  * @Annotation
  * @Target({"CLASS", "METHOD"})
  */
+#[\Attribute(\Attribute::TARGET_CLASS | \Attribute::TARGET_METHOD)]
 final class CoreBehaviour extends BaseAnnotation implements LivingDocumentationAnnotation
 {
     use SimpleValueAnnotation;

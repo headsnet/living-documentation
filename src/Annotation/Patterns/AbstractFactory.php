@@ -13,6 +13,7 @@ use Headsnet\LivingDocumentation\Annotation\LivingDocumentationAnnotation;
  * @Annotation
  * @Target({"CLASS"})
  */
+#[\Attribute(\Attribute::TARGET_CLASS)]
 final class AbstractFactory implements LivingDocumentationAnnotation
 {
 }

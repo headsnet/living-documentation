@@ -14,6 +14,7 @@ use Headsnet\LivingDocumentation\Annotation\Traits\ImmutableTrait;
  * @Annotation
  * @Target({"CLASS"})
  */
+#[\Attribute(\Attribute::TARGET_CLASS)]
 final class DTO implements LivingDocumentationAnnotation
 {
     use ImmutableTrait;

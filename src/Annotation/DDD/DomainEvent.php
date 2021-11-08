@@ -12,6 +12,7 @@ use Headsnet\LivingDocumentation\Annotation\SimpleValueAnnotation;
  * @Annotation
  * @Target({"CLASS"})
  */
+#[\Attribute(\Attribute::TARGET_CLASS)]
 final class DomainEvent implements LivingDocumentationAnnotation
 {
     use SimpleValueAnnotation;

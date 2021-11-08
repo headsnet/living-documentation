@@ -23,6 +23,7 @@ use Headsnet\LivingDocumentation\Annotation\LivingDocumentationAnnotation;
  * @Annotation
  * @Target({"CLASS", "METHOD", "PROPERTY"})
  */
+#[\Attribute(\Attribute::TARGET_CLASS | \Attribute::TARGET_METHOD | \Attribute::TARGET_PROPERTY)]
 final class AwaitingRefactoring extends BaseAnnotation implements LivingDocumentationAnnotation
 {
     /**

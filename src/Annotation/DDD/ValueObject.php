@@ -13,6 +13,7 @@ use Headsnet\LivingDocumentation\Annotation\SimpleValueAnnotation;
  * @Annotation
  * @Target({"CLASS"})
  */
+#[\Attribute(\Attribute::TARGET_CLASS)]
 final class ValueObject extends BaseAnnotation implements LivingDocumentationAnnotation
 {
     use SimpleValueAnnotation;

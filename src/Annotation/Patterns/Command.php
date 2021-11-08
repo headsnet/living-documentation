@@ -14,6 +14,7 @@ use Headsnet\LivingDocumentation\Annotation\SimpleValueAnnotation;
  * @Annotation
  * @Target({"CLASS"})
  */
+#[\Attribute(\Attribute::TARGET_CLASS)]
 final class Command implements LivingDocumentationAnnotation
 {
     use SimpleValueAnnotation;

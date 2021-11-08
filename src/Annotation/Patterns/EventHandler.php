@@ -18,6 +18,7 @@ use Headsnet\LivingDocumentation\Annotation\Traits\IdempotentTrait;
  * @Annotation
  * @Target({"CLASS"})
  */
+#[\Attribute(\Attribute::TARGET_CLASS)]
 final class EventHandler extends BaseAnnotation implements LivingDocumentationAnnotation
 {
     use IdempotentTrait;

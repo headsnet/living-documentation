@@ -13,6 +13,7 @@ use Headsnet\LivingDocumentation\Annotation\LivingDocumentationAnnotation;
  * @Annotation
  * @Target({"CLASS", "METHOD"})
  */
+#[\Attribute(\Attribute::TARGET_CLASS | \Attribute::TARGET_METHOD)]
 final class EmailMessage extends BaseAnnotation implements LivingDocumentationAnnotation
 {
     /**
