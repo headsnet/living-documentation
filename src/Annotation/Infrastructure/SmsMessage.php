@@ -27,10 +27,10 @@ final class SmsMessage extends BaseAnnotation implements LivingDocumentationAnno
      */
     private $description;
 
-    public function __construct(array $values)
+    public function __construct(string $messageName, string $description = '')
     {
-        $this->messageName = $values['messageName'];
-        $this->description = $values['description'] ?? '';
+        $this->messageName = $messageName;
+        $this->description = $description;
     }
 
     public function getMessageName(): string

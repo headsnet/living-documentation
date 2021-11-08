@@ -3,6 +3,7 @@ namespace Headsnet\LivingDocumentation\Annotation\DDD;
 
 use Doctrine\Common\Annotations\Annotation;
 use Headsnet\LivingDocumentation\Annotation\LivingDocumentationAnnotation;
+use Headsnet\LivingDocumentation\Annotation\SimpleValueAnnotation;
 
 /**
  * An application service manipulates domain entities and
@@ -14,4 +15,5 @@ use Headsnet\LivingDocumentation\Annotation\LivingDocumentationAnnotation;
 #[\Attribute(\Attribute::TARGET_CLASS)]
 final class ApplicationService implements LivingDocumentationAnnotation
 {
+    use SimpleValueAnnotation;
 }

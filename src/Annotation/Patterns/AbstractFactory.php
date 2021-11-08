@@ -3,6 +3,7 @@ namespace Headsnet\LivingDocumentation\Annotation\Patterns;
 
 use Doctrine\Common\Annotations\Annotation;
 use Headsnet\LivingDocumentation\Annotation\LivingDocumentationAnnotation;
+use Headsnet\LivingDocumentation\Annotation\SimpleValueAnnotation;
 
 /**
  * The abstract factory pattern provides a way to encapsulate a group of individual
@@ -16,4 +17,5 @@ use Headsnet\LivingDocumentation\Annotation\LivingDocumentationAnnotation;
 #[\Attribute(\Attribute::TARGET_CLASS)]
 final class AbstractFactory implements LivingDocumentationAnnotation
 {
+    use SimpleValueAnnotation;
 }

@@ -29,10 +29,10 @@ final class ConsoleCommand extends BaseAnnotation implements LivingDocumentation
      */
     private $description;
 
-    public function __construct(array $values)
+    public function __construct(string $commandName, string $description = '')
     {
-        $this->commandName = $values['commandName'];
-        $this->description = $values['description'];
+        $this->commandName = $commandName;
+        $this->description = $description;
     }
 
     public function getCommandName(): string

@@ -36,10 +36,10 @@ final class WorkInProgress extends BaseAnnotation implements LivingDocumentation
      */
     private $description;
 
-    public function __construct(array $values)
+    public function __construct(string $summary, string $description = '')
     {
-        $this->summary = $values['summary'];
-        $this->description = $values['description'] ?? '';
+        $this->summary = $summary;
+        $this->description = $description;
     }
 
     public function getSummary(): string

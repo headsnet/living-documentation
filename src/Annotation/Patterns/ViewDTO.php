@@ -25,8 +25,8 @@ final class ViewDTO
 {
     use ImmutableTrait;
 
-    public function __construct(array $values)
+    public function __construct(bool $immutable = false)
     {
-        $this->immutable = $values['immutable'] ?? '';
+        $this->immutable = $immutable;
     }
 }

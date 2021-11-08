@@ -3,6 +3,7 @@ namespace Headsnet\LivingDocumentation\Annotation\Patterns;
 
 use Doctrine\Common\Annotations\Annotation;
 use Headsnet\LivingDocumentation\Annotation\LivingDocumentationAnnotation;
+use Headsnet\LivingDocumentation\Annotation\SimpleValueAnnotation;
 
 /**
  * The adapter pattern is a software design pattern that allows the
@@ -19,4 +20,5 @@ use Headsnet\LivingDocumentation\Annotation\LivingDocumentationAnnotation;
 #[\Attribute(\Attribute::TARGET_CLASS)]
 final class Adapter implements LivingDocumentationAnnotation
 {
+    use SimpleValueAnnotation;
 }

@@ -3,6 +3,7 @@ namespace Headsnet\LivingDocumentation\Annotation\DDD;
 
 use Doctrine\Common\Annotations\Annotation;
 use Headsnet\LivingDocumentation\Annotation\LivingDocumentationAnnotation;
+use Headsnet\LivingDocumentation\Annotation\SimpleValueAnnotation;
 
 /**
  * When an operation does not conceptually belong to any object.
@@ -15,4 +16,5 @@ use Headsnet\LivingDocumentation\Annotation\LivingDocumentationAnnotation;
 #[\Attribute(\Attribute::TARGET_CLASS)]
 final class DomainService implements LivingDocumentationAnnotation
 {
+    use SimpleValueAnnotation;
 }

@@ -34,11 +34,11 @@ final class EventHandler extends BaseAnnotation implements LivingDocumentationAn
      */
     private $description;
 
-    public function __construct(array $values)
+    public function __construct(string $event, string $description = '', bool $idempotent = false)
     {
-        $this->event = $values['event'];
-        $this->description = $values['description'] ?? '';
-        $this->idempotent = $values['idempotent'] ?? '';
+        $this->event = $event;
+        $this->description = $description;
+        $this->idempotent = $idempotent;
     }
 
     public function getEvent(): string
