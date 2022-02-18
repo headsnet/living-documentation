@@ -12,7 +12,7 @@ use Headsnet\LivingDocumentation\Annotation\SimpleValueAnnotation;
  * @Annotation
  * @Target({"CLASS"})
  */
-#[\Attribute(\Attribute::TARGET_CLASS)]
+#[\Attribute(\Attribute::TARGET_CLASS|\Attribute::IS_REPEATABLE)]
 final class Invariant implements LivingDocumentationAnnotation
 {
     use SimpleValueAnnotation;
